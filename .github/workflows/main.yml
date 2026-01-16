@@ -24,9 +24,9 @@ jobs:
     - name: Build with Gradle
       run: |
         # 使用 gradle wrapper 命令生成必要的文件（这会自动下载 jar 包）
-        gradle wrapper --gradle-version 8.0
+        gradle wrapper --gradle-version 8.5
         # 现在可以安全地使用本地生成的 gradlew 了
-        ./gradlew assembleDebug
+        ./gradlew assembleDebug --warning-mode all
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
