@@ -1,5 +1,0 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    // 这里的 version 已经由 settings.gradle 统一管理，这里可以去掉显式版本号
-    id 'com.android.application' version '8.1.4' apply false 
-}
