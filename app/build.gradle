@@ -27,5 +27,5 @@ android {
 
 dependencies {
     // 这里填入 Dhizuku 的最新版本号
-    implementation 'com.iammphra:dhizuku:0.5.0' 
+    implementation 'com.github.iammphra:Dhizuku:2.11.2'
 }
