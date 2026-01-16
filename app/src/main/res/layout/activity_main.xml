@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="20dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ADB & eSIM" android:textSize="18sp" android:textStyle="bold" />
+    <Button android:id="@+id/btn_adb" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="开启ADB" />
+    
+    <ListView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="10dp" android:divider="#00000000" android:dividerHeight="10dp" />
+    
+    <Button android:id="@+id/btn_add" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="添加配置" />
+</LinearLayout>

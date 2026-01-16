@@ -1,0 +1,7 @@
+This project uses third-party libraries with the following licenses:
+
+1. Dhizuku-API (v2.5.4)
+   - License: MIT License
+   - Copyright: Copyright (c) 2023 iamr0s
+   - Library Location: app/libs/dhizuku.aar
+   - Source: https://github.com/iamr0s/Dhizuku-API

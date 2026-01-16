@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.simpleadb'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.simpleadb"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 【关键】告诉 Gradle 去 app/libs 文件夹找 AAR
+    repositories {
+        flatDir {
+            dirs 'libs' 
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    
+    // 【关键】引用我们下载的 AAR
+    implementation(name: 'dhizuku', ext: 'aar')
+}
