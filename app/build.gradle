@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'com.example.simpleadb' // 你的包名
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.simpleadb"
         minSdk 28
-        targetSdk 34
+        targetSdk 33
         versionCode 1
         versionName "1.0"
     }
