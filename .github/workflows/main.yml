@@ -19,14 +19,19 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # 【关键修改】这里不再使用 ./gradlew，而是直接使用 gradle 命令
-    # GitHub 环境默认自带 Gradle Wrapper，可以直接初始化并编译
+    # 【核心修改】使用官方 gradle-action，初始化 Gradle 8.5
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: 8.5
+
+    # 初始化 Wrapper（这一步会自动下载 jar 包，生成正确的 gradlew）
+    - name: Initialize Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.5
+
+    # 执行编译
     - name: Build with Gradle
-      run: |
-        # 使用 gradle wrapper 命令生成必要的文件（这会自动下载 jar 包）
-        gradle wrapper --gradle-version 8.5
-        # 现在可以安全地使用本地生成的 gradlew 了
-        ./gradlew assembleDebug --warning-mode all
+      run: ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
